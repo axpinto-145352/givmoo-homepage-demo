@@ -1,69 +1,80 @@
-# GivMoo homepage: 3-section concept (v2)
+# GivMoo homepage: storefront concept (v3)
 
-v2, 2026-09-29. The first version had 5 sections and still read as a lot. You couldn't tell what GivMoo does in the first second. v2 cuts it to three sections and makes the hero show the model: three real products, each labeled with the nonprofit it funds. On a phone the whole idea fits on the first screen. The page runs about 2.2 phone screens (v1 was 5.7; the live homepage is about 11.7).
+v3, 2026-09-29. Direction from Anthony: think Amazon, but for GivMoo. Get each shopper to the right place at the right time without overwhelming them.
 
-## The 3 sections
+v1 had 5 sections and read as a lot. v2 cut to 3 but read like a landing page, not a store. v3 is a storefront. The page runs about 2.3 phone screens (the live homepage is about 11.7).
 
-| # | Section | Job |
+## How it routes people
+
+| Shopper | Where they go | On the page |
 |---|---|---|
-| 1 | Hero | One line on what GivMoo is, one line on how it works, one button (Shop by cause), and three product cards that each say which nonprofit they fund |
-| 2 | Best sellers | 4 products with prices, "Shop all", free shipping over $50 |
-| 3 | Run a nonprofit? | One dark band, two buttons: Get a store, Get a bulk quote |
+| Knows what they want | Search | Search bar in the header, sent to GivMoo's real product search (`/?s=...&post_type=product`) |
+| Browsing a type of thing | Departments | Dark department bar (Best sellers, Fall, Apparel, Drinkware, Accessories, Pets, Bath & body, Home décor, Shop by cause), plus 4 "Shop by what you need" tiles |
+| Here for the season | The one banner | Fall favorites now. Rotates by season (below) |
+| Wants what others buy | Best sellers | 8 products in the store's real popularity order, swipe on a phone |
+| Starts from a cause | Shop by cause | 8 cause chips + All causes |
+| Runs a nonprofit | Side door | "For nonprofits" in the header, one band at the bottom. Kept out of the shopper path |
 
-Then a short footer (About, FAQ, Track an order, Returns, Nonprofit login, contact).
+One line under the department bar says what GivMoo is: "Every purchase supports a cause. Free shipping on orders over $50."
 
-## Cut from v1, and where it should live instead
-- Trust numbers (5K customers, 4.9 stars, 328+ products): product pages or checkout, once they're backed up.
-- 11 cause chips: the Shop page.
-- How it works (3 steps): the hero now shows it.
-- Harvest of Savings promo: the wholesale page, where the bulk buyer already is.
-- Reviews, FAQ, $5-off newsletter: FAQ page, footer, or an exit pop-up.
+## The right-time banner: suggested rotation (from GivMoo's own categories)
+
+| When | Banner | Category size today |
+|---|---|---|
+| Aug | Back to School | 51 products |
+| Sep to Oct | Fall | 50 products |
+| Nov to Dec | Holiday gifts | ⚠️ Christmas has 4 products, Kwanzaa 1. Build this out before November |
+| Mar to May | Spring | 38 products |
+| Jun to Jul | Summer + 4th of July | 54 + 9 products |
+
+## Data behind the page
+Prices, names, images, categories and the best-seller order come from GivMoo's WooCommerce Store API (`/wp-json/wc/store/v1/products?orderby=popularity`), pulled 2026-09-29. The WAG cap's "Sold By" was confirmed on its product page. Product names are shortened for the cards.
+
+## Things this build found on the live store
+- The #1 best seller's main photo (Mootilda socks) still carries a "FREE Pair, July 20 to Aug 31" ribbon. That offer is over. The mockup uses the product's second photo.
+- The IISE mug and tumbler titles say "Professional Engineering Society." IISE Global is the International Institute for Sexual Empowerment (iiseglobal.org). The titles describe the wrong organization.
+- Only 2 of the 30 best sellers have a review (1 each). Amazon-style star ratings aren't possible yet, so the cards don't show them.
+- The #3 best seller is titled "LoveShackFancy® Inspired." A brand name in a product title is worth a second look.
 
 ## What was cut from the live homepage
 
 Second H1 ("GivMoo" and "Every Small Purchase Has BIG Impact." are both H1s on the live page), Featured Favorites category tabs, the "Your shortcut to best sellers" carousel, "Favorite Finds Only On GivMoo", the Buy Now Pay Later banner (Afterpay, Klarna, Zip), the shipping banner, Smart Finds tiles, the full "Shop All Over 328 items" catalog with filters and 37 pages, the Live Shipping / Great Gifts / Quality Guarantee strip, Shop by Collection tiles, and three of the FAQs (size waitlist, gift wrapping, order tracking). All of it still exists one click away on /shop/ and the category pages.
 
-## Sources (live site, read 2026-09-28)
+## Sources
 
 | What | Source |
 |---|---|
-| Colors, font | `--gm-*` tokens in the live combined stylesheet (primary `#e84a1a`, dark `#c13a0e`, accent `#f4831e`, light `#fff4ee`, font Nunito Sans) |
-| Logo, hero photo, favicon | `givmoo.com/wp-content/mu-plugins/givmoo-redesign/assets/img/logo.png`, `.../hero-shopping-bags.png` (served as JPEG), `wp-content/uploads/2025/11/cropped-GivMoo-Cow-Only-192x192.png` |
-| "100% of the retail profits go back to the organization behind it" | givmoo.com/about-us/ and the application page (hellogivmoo.com/apply) |
-| "Fully managed", product creation to fulfillment, customer service, marketing | givmoo.com/about-us/ |
-| "Within 2 business days" reply on applications | hellogivmoo.com/apply |
+| Colors, font | `--gm-*` tokens in the live stylesheet (primary `#e84a1a`, dark `#c13a0e`, accent `#f4831e`, light `#fff4ee`, font Nunito Sans) |
+| Logo, favicon | givmoo.com theme assets |
+| "Every purchase supports a cause", retail profits go to the organization | givmoo.com/about-us/ ("every product purchased directly supports a cause") |
+| "We build and run a store for your cause" | givmoo.com/about-us/ ("a fully managed solution... from product creation to fulfillment") |
+| Bulk merch for programs and fundraisers | givmoo.com/wholesale/ page title |
 | Free shipping over $50 | live site top bar |
-| 5K happy customers, 4.9★ average rating, 328+ products | live homepage stat row |
-| 7,000+ subscribers, $5 off | live homepage newsletter block |
-| Bulk orders "decorated or blank in most cases" | live homepage FAQ |
-| "Custom merch for schools, teams, nonprofits and events" | givmoo.com/wholesale/ page title |
-| Reviews (Linda, Erica Bingham) | live homepage "What Our Customers Say" |
-| FAQ answers | live homepage FAQ, lightly edited for length |
-| Address, email, social links | live homepage footer |
+| Department and cause links, product names, prices, images, best-seller order | Store API, pulled 2026-09-29 |
+| Search | GivMoo's own product search, `https://givmoo.com/?s=mug&post_type=product` returned 12 products on 2026-09-29 |
 
-**Products (name, price and "Sold By" checked on each live product page 2026-09-28; images are the 600x600 versions from each page):**
+**Products on the page (price and organization from the Store API, 2026-09-29):**
 
-| Product | Price on live page | Sold by |
-|---|---|---|
-| Women's Columbia® Fleece Vest, Veteran Flag Design | $75.00 to $80.00 | GivMoo GiveBack Fund |
-| Men's Columbia® Fleece Vest, Veteran Flag Design | $75.00 to $85.00 | GivMoo GiveBack Fund |
-| Veterans Collaborative Minimal Canvas Tote | $24.99 | Veterans Collaborative |
-| TAD Foundation All-Over Print Bandana | $24.99 | TAD Foundation |
-| God Said Go Youth Hoodie | $34.99 | God Said Go Missions, Inc. |
-| GivMoo Cow Logo Unisex Long-Sleeve Shirt | $29.99 to $35.99 | GivMoo GiveBack Fund |
-| Funny Cat Mug, Orange Kitty | $26.99 | GivMoo GiveBack Fund |
-| Theodore Roosevelt Tuba Solo Graphic Tee | $24.99 to $34.99 | GivMoo GiveBack Fund |
+| Where | Product | Price | Supports |
+|---|---|---|---|
+| Banner | Women's Columbia® Fleece Vest (in the Fall category) | not shown | GivMoo GiveBack Fund |
+| Tile: Apparel | God Said Go Youth Hoodie | not shown | God Said Go Missions, Inc. |
+| Tile: Mugs & tumblers | IISE Insulated Tumbler | not shown | IISE Global |
+| Tile: Hats | WAG Women's Mesh-Back Cap | not shown | WAG History Preservation |
+| Tile: For your pet | NASP Pink Pet Tank Top | not shown | Nebraska Association of Service Providers |
+| Best seller 1 | Mootilda Cow Print Knee-High Socks | $27.99 | GivMoo GiveBack Fund |
+| Best seller 2 | Sleep Essential Oil Combo, 3 Piece | $15.00 | GivMoo GiveBack Fund |
+| Best seller 3 | Blue & White Checker Mini Dress | $42.99 | GivMoo GiveBack Fund |
+| Best seller 4 | WAG Women's Mesh-Back Cap | $29.99 | WAG History Preservation (Sold By, product page) |
+| Best seller 5 | IISE Logo Ceramic Mug, 11 oz | $19.99 | IISE Global |
+| Best seller 6 | IISE Insulated Tumbler, 20 oz | $44.99 | IISE Global |
+| Best seller 7 | Fall Press-On Nails with Manicure Kit | $15.00 to $15.99 | GivMoo GiveBack Fund |
+| Best seller 8 | Boomer Retro Graphic Tee | $19.99 to $24.99 | GivMoo GiveBack Fund |
 
-Display names are the first half of each live title (before the `|`). The full live title is on the linked product page.
-
-## Not live yet, or needs your confirmation
-
-- **Harvest of Savings is Evan's proposed October promo, not a live offer.** Wording from the call: send us your last quote and we beat it, or we give you a $100 gift card. It carries a "Proposed October promo" tag on the page. Confirm the terms before it goes on the real site.
-- **Trust numbers are your claims to substantiate:** 5K happy customers, 4.9★ average rating, 328+ products, 7,000+ subscribers. They are copied from the live page. Keep them only if you can back them up (an AI assistant or a buyer may ask where the 4.9 comes from).
-- **"Free" for nonprofits:** the mockup says "Open a GivMoo store for your cause" and does not say free, because the live site never says it. If stores cost a nonprofit nothing, say so. It is the strongest line you have for that door.
-- **"Your logo on apparel, drinkware and gifts" and "No inventory to buy or store"** are read from the live catalog and About page, not quoted. Confirm.
-- **Profits vs proceeds:** the About page says "100% of the retail profits" in one paragraph and "100% of proceeds" in another. They mean different things to a donor. The mockup uses "retail profits". Pick one and use it everywhere.
-- **Hero photo** is the stock shopping-bags image from the live site. A photo of a real nonprofit partner with their merch would do more.
+## Needs your confirmation
+- **"Free" for nonprofits:** the page says "Get a store" and doesn't say free, because the live site never says it. If a store costs a nonprofit nothing, say so. It's the strongest line you have for that door.
+- **Profits vs proceeds:** the About page says "100% of the retail profits" in one place and "100% of proceeds" in another. This page sidesteps it ("supports a cause"). Pick one and use it everywhere.
+- **Harvest of Savings** (your October promo idea) belongs on the wholesale page, where the bulk buyer already is, so it isn't on this page.
 
 ## Things on the live site this build tripped over
 
@@ -75,7 +86,7 @@ Display names are the first half of each live title (before the `|`). The full l
 
 ## AI search readiness built in
 
-All copy is in the static HTML body (no JavaScript rendering), one H1, one heading per section, meta description, and JSON-LD for `Organization` and `FAQPage` built only from facts on the live site. The FAQ answers in the JSON-LD match the visible answers.
+All copy is in the static HTML body (no JavaScript rendering), one H1, a heading per section, a meta description, and JSON-LD for `Organization` plus a `WebSite` `SearchAction` pointing at GivMoo's real product search.
 
 **This preview is set to noindex** (`<meta name="robots" content="noindex,nofollow">` plus a `robots.txt` that disallows everything) so it never competes with givmoo.com in search. Remove both in production.
 

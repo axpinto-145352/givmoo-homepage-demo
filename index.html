@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GivMoo | The online store where every purchase funds a nonprofit</title>
-  <meta name="description" content="GivMoo is an online store where every tee, mug, tote and gift supports a cause. Shop a nonprofit's store and the profit goes to them.">
+  <title>GivMoo | Shop tees, mugs, gifts and more. Every purchase supports a cause.</title>
+  <meta name="description" content="Shop apparel, drinkware, pet gear and gifts on GivMoo. Every product supports a cause, and the profit goes to the organization behind it.">
   <!-- Concept mockup: keep this out of search so it never competes with givmoo.com. Remove in production. -->
   <meta name="robots" content="noindex,nofollow">
-  <meta property="og:title" content="GivMoo | The online store where every purchase funds a nonprofit">
-  <meta property="og:description" content="Every product supports a cause. Shop a nonprofit's store and the profit goes to them.">
-  <meta property="og:image" content="assets/products/god-said-go-youth-hoodie.jpg">
+  <meta property="og:title" content="GivMoo | Every purchase supports a cause">
+  <meta property="og:description" content="Shop apparel, drinkware, pet gear and gifts. The profit goes to the organization behind each product.">
+  <meta property="og:image" content="assets/products/womens-fleece-vest.jpg">
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,106 +40,171 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "GivMoo",
+    "url": "https://givmoo.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://givmoo.com/?s={search_term_string}&post_type=product",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body>
 
   <div class="mock-strip" role="note">Concept mockup by Veteran Vectors for GivMoo. Not a live store.</div>
 
+  <!-- HEADER: logo, search (the front door for anyone who knows what they want), nonprofit side door, cart -->
   <header class="site-header">
     <div class="wrap header-row">
       <a class="logo" href="https://givmoo.com/" aria-label="GivMoo home">
         <img src="assets/givmoo-logo.png" alt="GivMoo" width="112" height="38">
       </a>
-      <nav class="main-nav" aria-label="Main">
-        <a href="https://givmoo.com/shop/">Shop</a>
-        <a href="#nonprofits">For nonprofits</a>
-        <a href="https://givmoo.com/cart/" class="cart" aria-label="Cart">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
-        </a>
-      </nav>
+      <form class="search" action="https://givmoo.com/" method="get" role="search">
+        <input type="hidden" name="post_type" value="product">
+        <label class="sr-only" for="q">Search GivMoo</label>
+        <input id="q" type="search" name="s" placeholder="Search tees, mugs, gifts" autocomplete="off">
+        <button type="submit" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+      </form>
+      <a class="np-link" href="#nonprofits">For nonprofits</a>
+      <a href="https://givmoo.com/cart/" class="cart" aria-label="Cart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+      </a>
     </div>
+    <!-- Department bar: the browse path. Scrolls sideways on a phone. -->
+    <nav class="dept" aria-label="Departments">
+      <div class="wrap dept-row">
+        <a href="https://givmoo.com/shop/?orderby=popularity">Best sellers</a>
+        <a href="https://givmoo.com/product-category/seasons/fall/">Fall</a>
+        <a href="https://givmoo.com/product-category/apparel/">Apparel</a>
+        <a href="https://givmoo.com/product-category/drinkware/">Drinkware</a>
+        <a href="https://givmoo.com/product-category/accessories/">Accessories</a>
+        <a href="https://givmoo.com/product-category/pets/">Pets</a>
+        <a href="https://givmoo.com/product-category/bath-body/">Bath &amp; body</a>
+        <a href="https://givmoo.com/product-category/home-decor/">Home décor</a>
+        <a href="https://givmoo.com/product-category/shop-by-cause/">Shop by cause</a>
+      </div>
+    </nav>
   </header>
+
+  <!-- One line that says what GivMoo is, where Amazon puts "Deliver to" -->
+  <p class="promise"><span class="wrap"><strong>Every purchase supports a cause.</strong> Free shipping on orders over $50.</span></p>
 
   <main>
 
-    <!-- 1. HERO: say what GivMoo is, then SHOW it: real products, each labeled with the nonprofit it pays -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <h1 id="hero-title">The online store where every purchase funds a nonprofit.</h1>
-          <p class="lede">Every tee, mug and tote supports a cause. Shop a nonprofit's store and the profit goes to them.</p>
-          <a class="btn btn-primary" href="https://givmoo.com/shop/">Shop by cause</a>
-        </div>
-
-        <ul class="pairs" role="list" aria-label="Examples of products and the nonprofit each one supports">
-          <li>
-            <a href="https://givmoo.com/product/veterans-collaborative-minimal-canvas-tote-heavyweight-cotton-reusable-shopping-everyday-tote-bag/">
-              <img src="assets/products/veterans-collaborative-tote.jpg" alt="Veterans Collaborative canvas tote" width="600" height="600">
-              <span class="p-name">Canvas tote</span>
-              <span class="p-cause">Funds <strong>Veterans Collaborative</strong></span>
-            </a>
-          </li>
-          <li>
-            <a href="https://givmoo.com/product/youth-hoodie-god-said-go-logo-kids-pullover/">
-              <img src="assets/products/god-said-go-youth-hoodie.jpg" alt="God Said Go youth hoodie" width="600" height="600">
-              <span class="p-name">Youth hoodie</span>
-              <span class="p-cause">Funds <strong>God Said Go Missions</strong></span>
-            </a>
-          </li>
-          <li>
-            <a href="https://givmoo.com/product/all-over-print-bandana-tad-foundation/">
-              <img src="assets/products/tad-bandana.jpg" alt="TAD Foundation print bandana" width="600" height="600">
-              <span class="p-name">Bandana</span>
-              <span class="p-cause">Funds <strong>TAD Foundation</strong></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 2. BEST SELLERS -->
-    <section class="shop" aria-labelledby="shop-title">
+    <!-- 1. RIGHT NOW: one seasonal banner. Rotates by season (see README). -->
+    <section class="banner" aria-labelledby="banner-title">
       <div class="wrap">
-        <div class="section-head">
-          <h2 id="shop-title">Best sellers</h2>
-          <a class="link" href="https://givmoo.com/shop/">Shop all</a>
-        </div>
-        <p class="note">Free shipping on orders over $50.</p>
+        <a class="banner-card" href="https://givmoo.com/product-category/seasons/fall/">
+          <div class="banner-copy">
+            <p class="eyebrow">Fall favorites</p>
+            <h1 id="banner-title">Cozy picks for cooler days. Every one supports a cause.</h1>
+            <span class="btn btn-primary">Shop Fall</span>
+          </div>
+          <img src="assets/products/womens-fleece-vest.jpg" alt="Black Columbia fleece vest with a veteran flag patch" width="600" height="600">
+        </a>
+      </div>
+    </section>
 
-        <ul class="grid" role="list">
-          <li class="card">
-            <a href="https://givmoo.com/product/womens-columbia-fleece-vest-veteran-flag/">
-              <img src="assets/products/womens-fleece-vest.jpg" alt="Women's Columbia Fleece Vest, Veteran Flag Design, in black" width="600" height="600" loading="lazy">
-              <span class="name">Women's Columbia® Fleece Vest</span>
-              <span class="price">$75.00 to $80.00</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://givmoo.com/product/givmoo-cow-logo-long-sleeve-tee-cute-farm-animal-graphic-shirt/">
-              <img src="assets/products/givmoo-cow-long-sleeve.jpg" alt="GivMoo cow logo unisex long-sleeve shirt" width="600" height="600" loading="lazy">
-              <span class="name">GivMoo Cow Long-Sleeve</span>
-              <span class="price">$29.99 to $35.99</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://givmoo.com/product/funny-cat-mug-orange-kitty-licking-face-ceramic-coffee-cup-11oz-15oz/">
-              <img src="assets/products/funny-cat-mug.jpg" alt="Ceramic mug printed with an orange cat licking its face" width="600" height="600" loading="lazy">
-              <span class="name">Funny Cat Mug</span>
-              <span class="price">$26.99</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://givmoo.com/product/theodore-roosevelt-tuba-solo-graphic-tee-retro-presidential-music-t-shirt/">
-              <img src="assets/products/roosevelt-tuba-tee.jpg" alt="Graphic tee of Theodore Roosevelt playing a tuba solo" width="600" height="600" loading="lazy">
-              <span class="name">Roosevelt Tuba Solo Tee</span>
-              <span class="price">$24.99 to $34.99</span>
-            </a>
-          </li>
+    <!-- 2. RIGHT PLACE: four doors by what you need -->
+    <section class="tiles" aria-labelledby="tiles-title">
+      <div class="wrap">
+        <h2 id="tiles-title">Shop by what you need</h2>
+        <ul class="tile-grid" role="list">
+          <li><a href="https://givmoo.com/product-category/apparel/">
+            <img src="assets/products/god-said-go-youth-hoodie.jpg" alt="" width="600" height="600" loading="lazy">
+            <span>Apparel</span></a></li>
+          <li><a href="https://givmoo.com/product-category/drinkware/">
+            <img src="assets/products/iise-tumbler.jpeg" alt="" width="600" height="600" loading="lazy">
+            <span>Mugs &amp; tumblers</span></a></li>
+          <li><a href="https://givmoo.com/product-category/accessories/hats/">
+            <img src="assets/products/wag-cap.jpeg" alt="" width="600" height="600" loading="lazy">
+            <span>Hats</span></a></li>
+          <li><a href="https://givmoo.com/product-category/pets/">
+            <img src="assets/products/nasp-pet-tank.jpeg" alt="" width="600" height="600" loading="lazy">
+            <span>For your pet</span></a></li>
         </ul>
       </div>
     </section>
 
-    <!-- 3. FOR NONPROFITS: one band, two doors -->
+    <!-- 3. BEST SELLERS: real order from the store's popularity sort, 2026-09-29. Swipe on a phone. -->
+    <section class="row" aria-labelledby="best-title">
+      <div class="wrap">
+        <div class="row-head">
+          <h2 id="best-title">Best sellers</h2>
+          <a class="link" href="https://givmoo.com/shop/?orderby=popularity">See all</a>
+        </div>
+        <ul class="carousel" role="list">
+          <li class="card"><a href="https://givmoo.com/product/mootilda-socks-custom-designed-womens-funny-cow-print-knee-high-socks-soft-over-the-calf-novelty-socks-for-costumes-gifts-everyday-wear/">
+            <img src="assets/products/socks.jpg" alt="Cow print knee-high socks" width="600" height="600" loading="lazy">
+            <span class="name">Mootilda Cow Print Knee-High Socks</span>
+            <span class="price">$27.99</span>
+            <span class="cause">Supports GivMoo GiveBack Fund</span></a></li>
+          <li class="card"><a href="https://givmoo.com/product/sleep-essential-oil-combo-vanilla-rose-sandalwood-3-piece-10ml-aromatherapy-nighttime-set/">
+            <img src="assets/products/oil-combo.jpg" alt="Three bottles of sleep essential oils" width="600" height="600" loading="lazy">
+            <span class="name">Sleep Essential Oil Combo, 3 Piece</span>
+            <span class="price">$15.00</span>
+            <span class="cause">Supports GivMoo GiveBack Fund</span></a></li>
+          <li class="card"><a href="https://givmoo.com/product/loveshackfancy-inspired-blue-white-checker-mini-dress-sleeveless-gingham-fit-flare-dress-womens-summer-dress/">
+            <img src="assets/products/checker-dress.jpg" alt="Blue and white checker mini dress" width="600" height="600" loading="lazy">
+            <span class="name">Blue &amp; White Checker Mini Dress</span>
+            <span class="price">$42.99</span>
+            <span class="cause">Supports GivMoo GiveBack Fund</span></a></li>
+          <li class="card"><a href="https://givmoo.com/product/womens-washed-mesh-back-cap-wag-history-preservation-and-cemetery-restoration/">
+            <img src="assets/products/wag-cap.jpeg" alt="Women's washed mesh-back cap" width="600" height="600" loading="lazy">
+            <span class="name">WAG Women's Mesh-Back Cap</span>
+            <span class="price">$29.99</span>
+            <span class="cause">Supports WAG History Preservation</span></a></li>
+          <li class="card"><a href="https://givmoo.com/product/iise-logo-ceramic-mug-professional-engineering-society-coffee-cup-11oz-dishwasher-safe/">
+            <img src="assets/products/iise-mug.jpeg" alt="White ceramic mug with the IISE logo" width="600" height="600" loading="lazy">
+            <span class="name">IISE Logo Ceramic Mug, 11 oz</span>
+            <span class="price">$19.99</span>
+            <span class="cause">Supports IISE Global</span></a></li>
+          <li class="card"><a href="https://givmoo.com/product/iise-logo-20oz-stainless-steel-tumbler-insulated-travel-cup-dishwasher-safe/">
+            <img src="assets/products/iise-tumbler.jpeg" alt="Stainless steel tumbler with the IISE logo" width="600" height="600" loading="lazy">
+            <span class="name">IISE Insulated Tumbler, 20 oz</span>
+            <span class="price">$44.99</span>
+            <span class="cause">Supports IISE Global</span></a></li>
+          <li class="card"><a href="https://givmoo.com/product/fall-autumn-glossy-almond-press-on-nails-with-bonus-manicure-tool-kit-24-piece-solid-color-nail-set-choose-your-palette/">
+            <img src="assets/products/press-on-nails.jpg" alt="Fall colored press-on nails with a manicure kit" width="600" height="600" loading="lazy">
+            <span class="name">Fall Press-On Nails with Manicure Kit</span>
+            <span class="price">$15.00 to $15.99</span>
+            <span class="cause">Supports GivMoo GiveBack Fund</span></a></li>
+          <li class="card"><a href="https://givmoo.com/product/boomer-t-shirt-boomer-1946-1964-retro-vintage-graphic-tee-baby-boomer-gift-shirt/">
+            <img src="assets/products/boomer-tee.jpeg" alt="Retro Boomer graphic t-shirt" width="600" height="600" loading="lazy">
+            <span class="name">Boomer Retro Graphic Tee</span>
+            <span class="price">$19.99 to $24.99</span>
+            <span class="cause">Supports GivMoo GiveBack Fund</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. SHOP BY CAUSE: for people who start from what they care about -->
+    <section class="causes" aria-labelledby="causes-title">
+      <div class="wrap">
+        <h2 id="causes-title">Shop by cause</h2>
+        <p class="sub">Start with what you care about. Everything in it supports that work.</p>
+        <div class="chip-row">
+          <a class="chip" href="https://givmoo.com/product-category/shop-by-cause/community-focus/">Community</a>
+          <a class="chip" href="https://givmoo.com/product-category/shop-by-cause/humans-with-disabilities/">Disabilities</a>
+          <a class="chip" href="https://givmoo.com/product-category/shop-by-cause/education/">Education</a>
+          <a class="chip" href="https://givmoo.com/product-category/shop-by-cause/faith-religion/">Faith</a>
+          <a class="chip" href="https://givmoo.com/product-category/shop-by-cause/lgbtq/">LGBTQ+</a>
+          <a class="chip" href="https://givmoo.com/product-category/shop-by-cause/music/">Music</a>
+          <a class="chip" href="https://givmoo.com/product-category/shop-by-cause/performance-art/">Performing arts</a>
+          <a class="chip" href="https://givmoo.com/product-category/shop-by-cause/seniors-aging/">Seniors</a>
+          <a class="chip chip-all" href="https://givmoo.com/product-category/shop-by-cause/">All causes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. NONPROFIT SIDE DOOR: kept out of the shopper path, one band at the bottom -->
     <section class="np" id="nonprofits" aria-labelledby="np-title">
       <div class="wrap np-inner">
         <h2 id="np-title">Run a nonprofit?</h2>
