@@ -1,22 +1,23 @@
-# GivMoo homepage: 5-section concept
+# GivMoo homepage: 3-section concept (v2)
 
-A concept mockup of a simpler GivMoo homepage, built by Veteran Vectors for Evan Parnell and Martiel Beatty after the 2026-09-28 call. It is a static page for review. It does not take orders: every button and link goes to the matching page on the live givmoo.com.
+v2, 2026-09-29. The first version had 5 sections and still read as a lot. You couldn't tell what GivMoo does in the first second. v2 cuts it to three sections and makes the hero show the model: three real products, each labeled with the nonprofit it funds. On a phone the whole idea fits on the first screen. The page runs about 2.2 phone screens (v1 was 5.7; the live homepage is about 11.7).
 
-**Preview:** open `index.html` in a browser. No build step, no framework.
-
-## Why 5 sections
-
-On the call Evan said the live homepage runs about 17 phone screens because sections kept getting added and none were removed. He wants roughly five, and a page that reads "here's what we do, here's the offer, buy this thing."
-
-Measured on this mockup (headless WebKit, fallback font): **about 5.7 phone screens at 390 x 844**, 3.9 screens at 1440 x 900.
+## The 3 sections
 
 | # | Section | Job |
 |---|---|---|
-| 1 | Hero | What GivMoo is in one line, one offer (free shipping over $50), one main button (Shop best sellers), one side door (For nonprofits), the three trust numbers |
-| 2 | Best sellers + shop by cause | 8 real products with price and the nonprofit each one supports; the 11 nonprofit stores as a chip row |
-| 3 | How it works | 3 steps: pick a product, choose your cause, the profits go to them |
-| 4 | For nonprofits | Two doors side by side: open a store, or place a bulk order. The bulk door carries the Harvest of Savings offer |
-| 5 | Proof, FAQ, newsletter | Two real customer reviews, 4 FAQs, the $5-off signup, then the footer |
+| 1 | Hero | One line on what GivMoo is, one line on how it works, one button (Shop by cause), and three product cards that each say which nonprofit they fund |
+| 2 | Best sellers | 4 products with prices, "Shop all", free shipping over $50 |
+| 3 | Run a nonprofit? | One dark band, two buttons: Get a store, Get a bulk quote |
+
+Then a short footer (About, FAQ, Track an order, Returns, Nonprofit login, contact).
+
+## Cut from v1, and where it should live instead
+- Trust numbers (5K customers, 4.9 stars, 328+ products): product pages or checkout, once they're backed up.
+- 11 cause chips: the Shop page.
+- How it works (3 steps): the hero now shows it.
+- Harvest of Savings promo: the wholesale page, where the bulk buyer already is.
+- Reviews, FAQ, $5-off newsletter: FAQ page, footer, or an exit pop-up.
 
 ## What was cut from the live homepage
 

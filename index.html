@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GivMoo | Shop gifts and everyday goods that fund nonprofits</title>
-  <meta name="description" content="GivMoo is an online store where 100% of the retail profits go back to the nonprofit behind each product. Shop apparel, drinkware, pet gear and gifts, or open a store for your cause.">
+  <title>GivMoo | The online store where every purchase funds a nonprofit</title>
+  <meta name="description" content="GivMoo is an online store where every tee, mug, tote and gift supports a cause. Shop a nonprofit's store and the profit goes to them.">
   <!-- Concept mockup: keep this out of search so it never competes with givmoo.com. Remove in production. -->
   <meta name="robots" content="noindex,nofollow">
-  <meta property="og:title" content="GivMoo | Shop gifts and everyday goods that fund nonprofits">
-  <meta property="og:description" content="100% of the retail profits go back to the nonprofit behind each product.">
-  <meta property="og:image" content="assets/hero-shopping-bags.jpg">
+  <meta property="og:title" content="GivMoo | The online store where every purchase funds a nonprofit">
+  <meta property="og:description" content="Every product supports a cause. Shop a nonprofit's store and the profit goes to them.">
+  <meta property="og:image" content="assets/products/god-said-go-youth-hoodie.jpg">
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
     "legalName": "GivMoo LLC",
     "url": "https://givmoo.com/",
     "logo": "https://givmoo.com/wp-content/mu-plugins/givmoo-redesign/assets/img/logo.png",
-    "description": "An online marketplace built for nonprofits, where 100% of the retail profits go back to the organization behind each product.",
+    "description": "An online store where every product supports a cause, and the retail profits go back to the organization behind it.",
     "email": "hiya@givmoo.com",
     "address": {
       "@type": "PostalAddress",
@@ -40,34 +40,6 @@
     ]
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Do you offer bulk orders?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer bulk orders, decorated or blank in most cases. Our manufacturer and supplier network gives us millions of products to choose from. Request a quote on our wholesale page or email hiya@givmoo.com to get started." }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does shipping take?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Most products are made when you order them, which keeps prices low. Production takes 2 to 5 days and standard shipping takes 3 to 5 business days. Personalized items may need 2 to 3 extra days. Shipping is calculated at checkout." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is your return policy?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Because most products are made to order, they can only be returned if they arrive damaged or get lost. We'll also give you a one-time, no-questions-asked refund on an item that just didn't work out." }
-      },
-      {
-        "@type": "Question",
-        "name": "How does personalization work?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Select your product, choose the personalization option and enter your custom text, name or message. Our team makes your item and sends you a preview before it ships." }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
 
@@ -80,8 +52,7 @@
       </a>
       <nav class="main-nav" aria-label="Main">
         <a href="https://givmoo.com/shop/">Shop</a>
-        <a href="#nonprofits" class="hide-sm">For nonprofits</a>
-        <a href="https://givmoo.com/wholesale/">Bulk orders</a>
+        <a href="#nonprofits">For nonprofits</a>
         <a href="https://givmoo.com/cart/" class="cart" aria-label="Cart">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
         </a>
@@ -91,117 +62,76 @@
 
   <main>
 
-    <!-- 1. HERO: what GivMoo is, one offer, one primary action -->
+    <!-- 1. HERO: say what GivMoo is, then SHOW it: real products, each labeled with the nonprofit it pays -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="kicker">Giving back made easy</p>
-          <h1 id="hero-title">Shop gifts and everyday goods that fund nonprofits.</h1>
-          <p class="lede">100% of the retail profits go back to the nonprofit behind each product. You shop, they get funded.</p>
-          <p class="offer"><strong>Free shipping</strong> on orders over $50.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://givmoo.com/product-category/best-sellers/">Shop best sellers</a>
-            <a class="btn btn-ghost" href="#nonprofits">For nonprofits</a>
-          </div>
-          <ul class="trust" aria-label="GivMoo by the numbers">
-            <li><strong>5K</strong> happy customers</li>
-            <li><strong>4.9★</strong> average rating</li>
-            <li><strong>328+</strong> products</li>
-          </ul>
+          <h1 id="hero-title">The online store where every purchase funds a nonprofit.</h1>
+          <p class="lede">Every tee, mug and tote supports a cause. Shop a nonprofit's store and the profit goes to them.</p>
+          <a class="btn btn-primary" href="https://givmoo.com/shop/">Shop by cause</a>
         </div>
-        <div class="hero-art">
-          <img src="assets/hero-shopping-bags.jpg" alt="Three shoppers holding up colorful gift bags" width="1024" height="546">
-        </div>
+
+        <ul class="pairs" role="list" aria-label="Examples of products and the nonprofit each one supports">
+          <li>
+            <a href="https://givmoo.com/product/veterans-collaborative-minimal-canvas-tote-heavyweight-cotton-reusable-shopping-everyday-tote-bag/">
+              <img src="assets/products/veterans-collaborative-tote.jpg" alt="Veterans Collaborative canvas tote" width="600" height="600">
+              <span class="p-name">Canvas tote</span>
+              <span class="p-cause">Funds <strong>Veterans Collaborative</strong></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://givmoo.com/product/youth-hoodie-god-said-go-logo-kids-pullover/">
+              <img src="assets/products/god-said-go-youth-hoodie.jpg" alt="God Said Go youth hoodie" width="600" height="600">
+              <span class="p-name">Youth hoodie</span>
+              <span class="p-cause">Funds <strong>God Said Go Missions</strong></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://givmoo.com/product/all-over-print-bandana-tad-foundation/">
+              <img src="assets/products/tad-bandana.jpg" alt="TAD Foundation print bandana" width="600" height="600">
+              <span class="p-name">Bandana</span>
+              <span class="p-cause">Funds <strong>TAD Foundation</strong></span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- 2. BEST SELLERS + SHOP BY CAUSE -->
+    <!-- 2. BEST SELLERS -->
     <section class="shop" aria-labelledby="shop-title">
       <div class="wrap">
         <div class="section-head">
           <h2 id="shop-title">Best sellers</h2>
           <a class="link" href="https://givmoo.com/shop/">Shop all</a>
         </div>
-
-        <div class="causes" aria-label="Shop by cause">
-          <span class="causes-label">Shop by cause:</span>
-          <div class="chip-row">
-            <a class="chip" href="https://givmoo.com/store/veteranscollaborative/">Veterans Collaborative</a>
-            <a class="chip" href="https://givmoo.com/store/tadfoundation/">TAD Foundation</a>
-            <a class="chip" href="https://givmoo.com/store/girls-inc/">Girls Inc. of Kingsport</a>
-            <a class="chip" href="https://givmoo.com/store/gsg/">God Said Go Missions</a>
-            <a class="chip" href="https://givmoo.com/store/capital-cabaret/">Capital Cabaret</a>
-            <a class="chip" href="https://givmoo.com/store/wag/">WAG History Preservation</a>
-            <a class="chip" href="https://givmoo.com/store/vala-heart/">Vala Heart Foundation</a>
-            <a class="chip" href="https://givmoo.com/store/transupfrontil/">Trans Up Front</a>
-            <a class="chip" href="https://givmoo.com/store/iiseglobal/">IISE Global</a>
-            <a class="chip" href="https://givmoo.com/store/neasp/">Nebraska Association of Service Providers</a>
-            <a class="chip" href="https://givmoo.com/store/givmoogivebackfund/">GivMoo GiveBack Fund</a>
-          </div>
-        </div>
+        <p class="note">Free shipping on orders over $50.</p>
 
         <ul class="grid" role="list">
           <li class="card">
             <a href="https://givmoo.com/product/womens-columbia-fleece-vest-veteran-flag/">
               <img src="assets/products/womens-fleece-vest.jpg" alt="Women's Columbia Fleece Vest, Veteran Flag Design, in black" width="600" height="600" loading="lazy">
-              <span class="name">Women's Columbia® Fleece Vest, Veteran Flag</span>
-              <span class="cause">Supports GivMoo GiveBack Fund</span>
+              <span class="name">Women's Columbia® Fleece Vest</span>
               <span class="price">$75.00 to $80.00</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://givmoo.com/product/mens-columbia-fleece-vest-veteran-flag/">
-              <img src="assets/products/mens-fleece-vest.webp" alt="Men's Columbia Fleece Vest, Veteran Flag Design, in black" width="600" height="600" loading="lazy">
-              <span class="name">Men's Columbia® Fleece Vest, Veteran Flag</span>
-              <span class="cause">Supports GivMoo GiveBack Fund</span>
-              <span class="price">$75.00 to $85.00</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://givmoo.com/product/veterans-collaborative-minimal-canvas-tote-heavyweight-cotton-reusable-shopping-everyday-tote-bag/">
-              <img src="assets/products/veterans-collaborative-tote.jpg" alt="Veterans Collaborative minimal canvas tote bag" width="600" height="600" loading="lazy">
-              <span class="name">Veterans Collaborative Minimal Canvas Tote</span>
-              <span class="cause">Supports Veterans Collaborative</span>
-              <span class="price">$24.99</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://givmoo.com/product/all-over-print-bandana-tad-foundation/">
-              <img src="assets/products/tad-bandana.jpg" alt="TAD Foundation all-over print bandana" width="600" height="600" loading="lazy">
-              <span class="name">TAD Foundation All-Over Print Bandana</span>
-              <span class="cause">Supports TAD Foundation</span>
-              <span class="price">$24.99</span>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://givmoo.com/product/youth-hoodie-god-said-go-logo-kids-pullover/">
-              <img src="assets/products/god-said-go-youth-hoodie.jpg" alt="God Said Go youth hoodie" width="600" height="600" loading="lazy">
-              <span class="name">God Said Go Youth Hoodie</span>
-              <span class="cause">Supports God Said Go Missions, Inc.</span>
-              <span class="price">$34.99</span>
             </a>
           </li>
           <li class="card">
             <a href="https://givmoo.com/product/givmoo-cow-logo-long-sleeve-tee-cute-farm-animal-graphic-shirt/">
               <img src="assets/products/givmoo-cow-long-sleeve.jpg" alt="GivMoo cow logo unisex long-sleeve shirt" width="600" height="600" loading="lazy">
-              <span class="name">GivMoo Cow Logo Unisex Long-Sleeve Shirt</span>
-              <span class="cause">Supports GivMoo GiveBack Fund</span>
+              <span class="name">GivMoo Cow Long-Sleeve</span>
               <span class="price">$29.99 to $35.99</span>
             </a>
           </li>
           <li class="card">
             <a href="https://givmoo.com/product/funny-cat-mug-orange-kitty-licking-face-ceramic-coffee-cup-11oz-15oz/">
               <img src="assets/products/funny-cat-mug.jpg" alt="Ceramic mug printed with an orange cat licking its face" width="600" height="600" loading="lazy">
-              <span class="name">Funny Cat Mug, Orange Kitty</span>
-              <span class="cause">Supports GivMoo GiveBack Fund</span>
+              <span class="name">Funny Cat Mug</span>
               <span class="price">$26.99</span>
             </a>
           </li>
           <li class="card">
             <a href="https://givmoo.com/product/theodore-roosevelt-tuba-solo-graphic-tee-retro-presidential-music-t-shirt/">
               <img src="assets/products/roosevelt-tuba-tee.jpg" alt="Graphic tee of Theodore Roosevelt playing a tuba solo" width="600" height="600" loading="lazy">
-              <span class="name">Theodore Roosevelt Tuba Solo Graphic Tee</span>
-              <span class="cause">Supports GivMoo GiveBack Fund</span>
+              <span class="name">Roosevelt Tuba Solo Tee</span>
               <span class="price">$24.99 to $34.99</span>
             </a>
           </li>
@@ -209,102 +139,14 @@
       </div>
     </section>
 
-    <!-- 3. HOW IT WORKS -->
-    <section class="how" aria-labelledby="how-title">
-      <div class="wrap">
-        <h2 id="how-title">How GivMoo works</h2>
-        <ol class="steps">
-          <li>
-            <span class="num" aria-hidden="true">1</span>
-            <h3>Pick a product</h3>
-            <p>Apparel, drinkware, pet gear and everyday essentials. Most items are made to order, which keeps prices low.</p>
-          </li>
-          <li>
-            <span class="num" aria-hidden="true">2</span>
-            <h3>Choose your cause</h3>
-            <p>Shop a nonprofit's own store to back the one you care about, or browse the whole marketplace.</p>
-          </li>
-          <li>
-            <span class="num" aria-hidden="true">3</span>
-            <h3>The profits go to them</h3>
-            <p>100% of the retail profits go back to the organization behind the product.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- 4. FOR NONPROFITS: two doors -->
+    <!-- 3. FOR NONPROFITS: one band, two doors -->
     <section class="np" id="nonprofits" aria-labelledby="np-title">
-      <div class="wrap">
-        <h2 id="np-title">For nonprofits</h2>
-        <p class="section-lede">Two ways to work with GivMoo. Pick the one that fits.</p>
-        <div class="doors">
-          <article class="door">
-            <h3>Open a GivMoo store for your cause</h3>
-            <p>A fully managed store. We create the products, handle fulfillment and customer service, and market it. You share it with your supporters.</p>
-            <ul class="ticks">
-              <li>Your logo on apparel, drinkware and gifts</li>
-              <li>No inventory to buy or store</li>
-              <li>A GivMoo team member gets back to you within 2 business days</li>
-            </ul>
-            <a class="btn btn-primary" href="https://givmoo.com/apply/">Apply to join</a>
-          </article>
-          <article class="door door-bulk">
-            <h3>Bulk orders for programs and fundraisers</h3>
-            <p>Custom merch for your programs, events, staff and fundraisers. Decorated or blank, in most cases.</p>
-            <div class="promo">
-              <span class="pill">Proposed October promo</span>
-              <p class="promo-title">Harvest of Savings</p>
-              <p>Send us your last quote. We'll beat it, or we'll give you a $100 gift card.</p>
-            </div>
-            <a class="btn btn-dark" href="https://givmoo.com/wholesale/">Request a bulk quote</a>
-            <p class="small">Or email <a href="mailto:hiya@givmoo.com">hiya@givmoo.com</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. PROOF + FAQ + NEWSLETTER -->
-    <section class="proof" aria-labelledby="proof-title">
-      <div class="wrap">
-        <h2 id="proof-title">What shoppers say</h2>
-        <div class="quotes">
-          <figure>
-            <blockquote>"This was my first GivMoo order. I bought a few things for the house and honestly expected the nonprofit part to be the main reason I'd like it. Turns out I really liked the products too."</blockquote>
-            <figcaption>Your friend Linda, bought the Complete Makeup Brush Collection</figcaption>
-          </figure>
-          <figure>
-            <blockquote>"that's my Derby [her cat] had to get one"</blockquote>
-            <figcaption>Erica Bingham, bought the Funny Cat Mug</figcaption>
-          </figure>
-        </div>
-
-        <div class="faq-news">
-          <div class="faq">
-            <h2 class="h3">Questions</h2>
-            <details>
-              <summary>Do you offer bulk orders?</summary>
-              <p>Yes. We offer bulk orders, decorated or blank in most cases. Our manufacturer and supplier network gives us millions of products to choose from. <a href="https://givmoo.com/wholesale/">Request a quote</a> or email hiya@givmoo.com to get started.</p>
-            </details>
-            <details>
-              <summary>How long does shipping take?</summary>
-              <p>Most products are made when you order them, which keeps prices low. Production takes 2 to 5 days and standard shipping takes 3 to 5 business days. Personalized items may need 2 to 3 extra days. Shipping is calculated at checkout.</p>
-            </details>
-            <details>
-              <summary>What is your return policy?</summary>
-              <p>Because most products are made to order, they can only be returned if they arrive damaged or get lost. We'll also give you a one-time, no-questions-asked refund on an item that just didn't work out. <a href="https://givmoo.com/returns-exchanges-policy/">Full policy</a></p>
-            </details>
-            <details>
-              <summary>How does personalization work?</summary>
-              <p>Select your product, choose the personalization option and enter your custom text, name or message. Our team makes your item and sends you a preview before it ships.</p>
-            </details>
-          </div>
-
-          <aside class="news" aria-labelledby="news-title">
-            <h2 id="news-title" class="h3">Get $5 off your next order</h2>
-            <p>Join 7,000+ subscribers for deals and new products. Unsubscribe anytime.</p>
-            <a class="btn btn-primary" href="https://givmoo.com/#gm-newsletter">Get my $5 code</a>
-          </aside>
+      <div class="wrap np-inner">
+        <h2 id="np-title">Run a nonprofit?</h2>
+        <p>We build and run a store for your cause, or supply custom merch in bulk for your programs and fundraisers.</p>
+        <div class="np-actions">
+          <a class="btn btn-light" href="https://givmoo.com/apply/">Get a store</a>
+          <a class="btn btn-outline" href="https://givmoo.com/wholesale/">Get a bulk quote</a>
         </div>
       </div>
     </section>
@@ -312,35 +154,16 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrap foot-grid">
-      <div>
-        <img src="assets/givmoo-logo.png" alt="GivMoo" width="96" height="32" class="foot-logo">
-        <p>Email us 24/7: <a href="mailto:hiya@givmoo.com">hiya@givmoo.com</a></p>
-        <p>163 Mitchells Chance Rd, Suite 168<br>Edgewater, MD 21037</p>
-      </div>
-      <nav aria-label="Shoppers">
-        <h2 class="foot-h">Shoppers</h2>
-        <a href="https://givmoo.com/shop/">Shop all</a>
+    <div class="wrap">
+      <nav class="foot-links" aria-label="Footer">
+        <a href="https://givmoo.com/about-us/">About</a>
+        <a href="https://givmoo.com/customers-faq/">FAQ</a>
         <a href="https://givmoo.com/order-tracking/">Track an order</a>
         <a href="https://givmoo.com/returns-exchanges-policy/">Returns</a>
-        <a href="https://givmoo.com/about-us/">About GivMoo</a>
-      </nav>
-      <nav aria-label="Nonprofits">
-        <h2 class="foot-h">Nonprofits</h2>
-        <a href="https://givmoo.com/apply/">Apply to join</a>
-        <a href="https://givmoo.com/wholesale/">Bulk orders</a>
         <a href="https://givmoo.com/my-account/">Nonprofit login</a>
       </nav>
-      <nav aria-label="Social">
-        <h2 class="foot-h">Follow</h2>
-        <a href="https://www.instagram.com/givmoo.marketplace">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=61582354940371">Facebook</a>
-        <a href="https://www.linkedin.com/company/109520400/">LinkedIn</a>
-      </nav>
-    </div>
-    <div class="wrap legal">
-      <p>© 2026 GivMoo LLC. <a href="https://givmoo.com/privacy-policy/">Privacy</a> · <a href="https://givmoo.com/terms-of-service/">Terms</a></p>
-      <p>Concept mockup by Veteran Vectors. Every link goes to the live givmoo.com.</p>
+      <p>Questions? <a href="mailto:hiya@givmoo.com">hiya@givmoo.com</a> · Edgewater, MD</p>
+      <p class="legal">© 2026 GivMoo LLC · <a href="https://givmoo.com/privacy-policy/">Privacy</a> · <a href="https://givmoo.com/terms-of-service/">Terms</a> · Concept mockup by Veteran Vectors. Every link goes to the live givmoo.com.</p>
     </div>
   </footer>
 
