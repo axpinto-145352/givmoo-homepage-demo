@@ -9,7 +9,7 @@
   <meta name="robots" content="noindex,nofollow">
   <meta property="og:title" content="GivMoo | Every purchase supports a cause">
   <meta property="og:description" content="Shop apparel, drinkware, pet gear and gifts. The profit goes to the organization behind each product.">
-  <meta property="og:image" content="assets/products/womens-fleece-vest.jpg">
+  <meta property="og:image" content="assets/products/vc-hoodie.jpg">
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,17 +100,50 @@
 
   <main>
 
-    <!-- 1. RIGHT NOW: one seasonal banner. Rotates by season (see README). -->
+    <!-- 1. RIGHT NOW: one seasonal banner, each product labeled with the named nonprofit it supports.
+         Fall shows by default (and to crawlers). The script swaps in the gift banner Nov 1 to Dec 31.
+         Preview any season with ?season=gifts or ?season=fall -->
     <section class="banner" aria-labelledby="banner-title">
       <div class="wrap">
-        <a class="banner-card" href="https://givmoo.com/product-category/seasons/fall/">
+        <div class="banner-card" data-season="fall">
           <div class="banner-copy">
             <p class="eyebrow">Fall favorites</p>
-            <h2 id="banner-title">Cozy picks for cooler days.</h2>
-            <span class="btn btn-primary">Shop Fall</span>
+            <h2 id="banner-title">Cozy hoodies that back a real nonprofit.</h2>
+            <p class="banner-sub">Pick the cause. Wear it all season.</p>
+            <a class="btn btn-primary" href="https://givmoo.com/product-category/seasons/fall/">Shop Fall</a>
           </div>
-          <img src="assets/products/womens-fleece-vest.jpg" alt="Black Columbia fleece vest with a veteran flag patch" width="600" height="600">
-        </a>
+          <ul class="minis" role="list">
+            <li><a href="https://givmoo.com/product/unisex-hoodie-veterans-collaborative/">
+              <img src="assets/products/vc-hoodie.jpg" alt="Veterans Collaborative unisex hoodie" width="600" height="600">
+              <span>Veterans Collaborative</span></a></li>
+            <li><a href="https://givmoo.com/product/capital-cabaret-unisex-hoodie/">
+              <img src="assets/products/cc-hoodie.jpg" alt="Capital Cabaret unisex pullover hoodie" width="600" height="600">
+              <span>Capital Cabaret</span></a></li>
+            <li><a href="https://givmoo.com/product/nasp-unisex-hoodie-nebraska-association-of-service-providers-fleece-pullover/">
+              <img src="assets/products/nasp-hoodie.jpg" alt="Nebraska Association of Service Providers unisex hoodie" width="600" height="600">
+              <span>Nebraska Assoc. of Service Providers</span></a></li>
+          </ul>
+        </div>
+
+        <div class="banner-card" data-season="gifts" hidden>
+          <div class="banner-copy">
+            <p class="eyebrow">Holiday gifts</p>
+            <h2>Gifts under $25 that give back.</h2>
+            <p class="banner-sub">Each one supports the nonprofit named on it.</p>
+            <a class="btn btn-primary" href="https://givmoo.com/product-category/holidays/">Shop holiday gifts</a>
+          </div>
+          <ul class="minis" role="list">
+            <li><a href="https://givmoo.com/product/veterans-collaborative-ceramic-mug-11-oz-coffee-mug-glossy-white-ceramic-mug/">
+              <img src="assets/products/vc-mug.jpeg" alt="Veterans Collaborative ceramic mug" width="600" height="600" loading="lazy">
+              <span>Veterans Collaborative · $19.99</span></a></li>
+            <li><a href="https://givmoo.com/product/can-cooler-koozie-capital-cabaret/">
+              <img src="assets/products/cc-koozie.jpg" alt="Capital Cabaret can cooler" width="600" height="600" loading="lazy">
+              <span>Capital Cabaret · $12.99</span></a></li>
+            <li><a href="https://givmoo.com/product/veterans-collaborative-minimal-canvas-tote-heavyweight-cotton-reusable-shopping-everyday-tote-bag/">
+              <img src="assets/products/veterans-collaborative-tote.jpg" alt="Veterans Collaborative canvas tote" width="600" height="600" loading="lazy">
+              <span>Veterans Collaborative · $24.99</span></a></li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -120,16 +153,16 @@
         <h2 id="tiles-title">Shop by what you need</h2>
         <ul class="tile-grid" role="list">
           <li><a href="https://givmoo.com/product-category/apparel/">
-            <img src="assets/products/god-said-go-youth-hoodie.jpg" alt="" width="600" height="600" loading="lazy">
+            <img src="assets/products/givmoo-cow-long-sleeve.jpg" alt="" width="600" height="600" loading="lazy">
             <span>Apparel</span></a></li>
           <li><a href="https://givmoo.com/product-category/drinkware/">
-            <img src="assets/products/iise-tumbler.jpeg" alt="" width="600" height="600" loading="lazy">
+            <img src="assets/products/funny-cat-mug.jpg" alt="" width="600" height="600" loading="lazy">
             <span>Mugs &amp; tumblers</span></a></li>
           <li><a href="https://givmoo.com/product-category/accessories/hats/">
             <img src="assets/products/wag-cap.jpeg" alt="" width="600" height="600" loading="lazy">
             <span>Hats</span></a></li>
           <li><a href="https://givmoo.com/product-category/pets/">
-            <img src="assets/products/nasp-pet-tank.jpeg" alt="" width="600" height="600" loading="lazy">
+            <img src="assets/products/pet-sweater.jpg" alt="" width="600" height="600" loading="lazy">
             <span>For your pet</span></a></li>
         </ul>
       </div>
@@ -142,6 +175,7 @@
           <h2 id="best-title">Best sellers</h2>
           <a class="link" href="https://givmoo.com/shop/?orderby=popularity">See all</a>
         </div>
+        <p class="note">Made to order for you: 2 to 5 days to make, then 3 to 5 business days to ship.</p>
         <div class="car-wrap">
         <button class="car-btn prev" type="button" aria-label="Previous best sellers" disabled>&#8249;</button>
         <ul class="carousel" role="list">
@@ -239,6 +273,21 @@
   </footer>
 
   <script>
+    // Right time: gift banner Nov 1 to Dec 31, Fall otherwise. ?season=gifts or ?season=fall previews either.
+    (function () {
+      var forced = new URLSearchParams(location.search).get('season');
+      var month = new Date().getMonth() + 1;
+      var season = forced || (month >= 11 ? 'gifts' : 'fall');
+      var cards = document.querySelectorAll('.banner-card[data-season]');
+      if (![].some.call(cards, function (c) { return c.dataset.season === season; })) return;
+      cards.forEach(function (c) {
+        var on = c.dataset.season === season;
+        c.hidden = !on;
+        var h = c.querySelector('h2');
+        if (on) h.id = 'banner-title'; else h.removeAttribute('id');
+      });
+    })();
+
     // Arrows for the best-sellers row, and a fade on any sideways row that has more to see.
     (function () {
       var rows = document.querySelectorAll('.carousel, .dept-row, .chip-row');

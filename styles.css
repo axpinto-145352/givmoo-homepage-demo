@@ -79,12 +79,17 @@ h2 { font-size: 21px; font-weight: 800; }
 section { padding: 20px 0 4px; }
 
 /* 1. Seasonal banner */
-.banner-card { display: grid; grid-template-columns: 1.25fr 1fr; align-items: center; gap: 8px; text-decoration: none; color: var(--text);
-  background: linear-gradient(135deg, #fbe3cf 0%, var(--light) 70%); border-radius: 14px; overflow: hidden; padding: 18px 0 18px 18px; }
-.banner-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; mix-blend-mode: multiply; }
+.banner-card { display: grid; gap: 16px; background: linear-gradient(135deg, #fbe3cf 0%, var(--light) 70%); border-radius: 14px; padding: 18px; }
+.banner-card[hidden] { display: none; }
 .eyebrow { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--primary-dark); margin-bottom: 6px; }
+.banner-sub { margin-top: 6px; color: #3b3b52; font-size: 15px; }
 .banner-copy .btn { margin-top: 14px; padding: 10px 18px; font-size: 15px; }
-.banner-card:hover .btn-primary { background: #9e2f0b; }
+.minis { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.minis a { display: flex; flex-direction: column; height: 100%; text-decoration: none; color: var(--text); background: #fff; border-radius: 10px; overflow: hidden;
+  box-shadow: 0 1px 2px rgba(26,26,46,.06), 0 3px 10px rgba(26,26,46,.06); }
+.minis img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; }
+.minis span { font-size: 11.5px; line-height: 1.3; font-weight: 700; color: var(--primary-dark); padding: 6px 8px 8px; }
+.minis a:hover span { text-decoration: underline; }
 
 /* 2. Tiles */
 .tile-grid { list-style: none; padding: 0; margin: 12px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
@@ -141,7 +146,7 @@ section { padding: 20px 0 4px; }
   .search input[type=search] { padding: 10px 8px; }
   .search button { padding: 0 12px; }
   .banner-copy h2 { font-size: 21px; }
-  .banner-card { padding: 16px 0 16px 16px; }
+  .banner-card { padding: 16px; }
 }
 @media (min-width: 720px) {
   .header-row { grid-template-columns: auto 1fr auto auto; grid-template-areas: "logo search np cart"; gap: 24px; padding-top: 10px; padding-bottom: 10px; }
@@ -152,8 +157,9 @@ section { padding: 20px 0 4px; }
   .np-link { font-size: 15px; }
   h2 { font-size: 24px; }
   section { padding: 28px 0 4px; }
-  .banner-card { grid-template-columns: 1.4fr 1fr; padding: 36px 0 36px 44px; }
-  .banner-card img { max-height: 300px; }
+  .banner-card { grid-template-columns: 1fr 1.25fr; align-items: center; gap: 36px; padding: 36px 44px; }
+  .minis { gap: 14px; }
+  .minis span { font-size: 13px; padding: 8px 10px 10px; }
   .tile-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
   .carousel { grid-auto-columns: calc((100% - 5 * 16px) / 6); gap: 16px; }
   .np-inner { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 40px; }
@@ -173,7 +179,6 @@ section { padding: 20px 0 4px; }
 }
 /* Phones on their side: short screens get a compact banner */
 @media (max-height: 500px) and (min-width: 720px) {
-  .banner-card { padding: 18px 0 18px 28px; }
+  .banner-card { padding: 18px 28px; gap: 20px; }
   .banner-copy h2 { font-size: 24px; }
-  .banner-card img { max-height: 170px; }
 }

@@ -22,13 +22,19 @@ WebKit (Safari and every iPhone/iPad browser) and Chrome 152 (Android Chrome, de
 
 Only the search bar stays pinned when you scroll (like Amazon's mobile site). The department bar scrolls away. On phones, "For nonprofits" moves into the department bar.
 
-## The right-time banner: suggested rotation (from GivMoo's own categories)
+## The right-time banner
+Each banner product carries the name of the nonprofit it supports, so the cause is concrete at first glance.
+- **Now to Oct 31: "Cozy hoodies that back a real nonprofit."** Veterans Collaborative, Capital Cabaret and Nebraska Association of Service Providers hoodies (all in the Fall category, $49.50 to $62.00).
+- **Nov 1 to Dec 31: "Gifts under $25 that give back."** Veterans Collaborative mug ($19.99), Capital Cabaret koozie ($12.99), Veterans Collaborative tote ($24.99). Links to the Holidays category.
+- The page switches on the visitor's date. Preview either one now: add `?season=gifts` or `?season=fall` to the link. Crawlers and no-JavaScript visitors see Fall.
+
+Suggested rotation for the rest of the year, from GivMoo's own categories:
 
 | When | Banner | Category size today |
 |---|---|---|
 | Aug | Back to School | 51 products |
-| Sep to Oct | Fall | 50 products |
-| Nov to Dec | Holiday gifts | ⚠️ Christmas has 4 products, Kwanzaa 1. Build this out before November |
+| Sep to Oct | Fall (built) | 50 products |
+| Nov to Dec | Gifts that give back (built) | ⚠️ Christmas has 4 products, Kwanzaa 1. The Holidays category is mostly Veterans Collaborative merch and koozies. Build a real gift collection before November |
 | Mar to May | Spring | 38 products |
 | Jun to Jul | Summer + 4th of July | 54 + 9 products |
 
@@ -36,6 +42,8 @@ Only the search bar stays pinned when you scroll (like Amazon's mobile site). Th
 Prices, names, images, categories and the best-seller order come from GivMoo's WooCommerce Store API (`/wp-json/wc/store/v1/products?orderby=popularity`), pulled 2026-09-29. The WAG cap's "Sold By" was confirmed on its product page. Product names are shortened for the cards.
 
 ## Things this build found on the live store
+- **The delivery promise contradicts itself.** Every product card on the live homepage says "Get it in 2-4 days". The FAQ says "it takes 2-5 days to produce and standard shipping takes 3-5 business days." The mockup uses the FAQ numbers. Pick the true one and use it everywhere.
+- **"®-Inspired" product titles are a pattern, not a one-off.** The Fall category alone has "Adidas® Inspired" (6 shoes), "Converse® Inspired", "REI® Inspired" (2 tees) and "Mead® Inspired", plus "LoveShackFancy® Inspired" in best sellers. Worth a lawyer's look.
 - The #1 best seller's main photo (Mootilda socks) still carries a "FREE Pair, July 20 to Aug 31" ribbon. That offer is over. The mockup uses the product's second photo.
 - The IISE mug and tumbler titles say "Professional Engineering Society." IISE Global is the International Institute for Sexual Empowerment (iiseglobal.org). The titles describe the wrong organization.
 - Only 2 of the 30 best sellers have a review (1 each). Amazon-style star ratings aren't possible yet, so the cards don't show them.
@@ -62,11 +70,12 @@ Second H1 ("GivMoo" and "Every Small Purchase Has BIG Impact." are both H1s on t
 
 | Where | Product | Price | Supports |
 |---|---|---|---|
-| Banner | Women's Columbia® Fleece Vest (in the Fall category) | not shown | GivMoo GiveBack Fund |
-| Tile: Apparel | God Said Go Youth Hoodie | not shown | God Said Go Missions, Inc. |
-| Tile: Mugs & tumblers | IISE Insulated Tumbler | not shown | IISE Global |
+| Fall banner | Veterans Collaborative / Capital Cabaret / NASP unisex hoodies | $49.50 to $62.00 each | Veterans Collaborative (Sold By, product page) / Capital Cabaret DC / NASP |
+| Gift banner | Veterans Collaborative mug / Capital Cabaret koozie / Veterans Collaborative tote | $19.99 / $12.99 / $24.99 | Veterans Collaborative / Capital Cabaret DC / Veterans Collaborative |
+| Tile: Apparel | GivMoo Cow Logo Unisex Long-Sleeve Shirt | not shown | GivMoo GiveBack Fund |
+| Tile: Mugs & tumblers | Funny Cat Mug, Orange Kitty | not shown | GivMoo GiveBack Fund |
 | Tile: Hats | WAG Women's Mesh-Back Cap | not shown | WAG History Preservation |
-| Tile: For your pet | NASP Pink Pet Tank Top | not shown | Nebraska Association of Service Providers |
+| Tile: For your pet | Tuxedo Pet Sweater with Red Bow Tie | not shown | GivMoo GiveBack Fund |
 | Best seller 1 | Mootilda Cow Print Knee-High Socks | $27.99 | GivMoo GiveBack Fund |
 | Best seller 2 | Sleep Essential Oil Combo, 3 Piece | $15.00 | GivMoo GiveBack Fund |
 | Best seller 3 | Blue & White Checker Mini Dress | $42.99 | GivMoo GiveBack Fund |
