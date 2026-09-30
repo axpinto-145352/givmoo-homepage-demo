@@ -44,13 +44,13 @@ p { margin: 0; }
 .logo { grid-area: logo; display: block; padding: 12px 0; }
 .logo img { width: 78px; height: auto; }
 .np-link { grid-area: np; display: none; font-weight: 700; font-size: 14px; text-decoration: none; color: var(--muted); padding: 11px 0; }
-.np-link:hover { color: var(--primary); }
+.np-link:hover { color: var(--primary-dark); }
 .cart { grid-area: cart; display: inline-flex; color: var(--text); padding: 10px 4px; }
-.search { grid-area: search; display: flex; border: 2px solid var(--primary); border-radius: 999px; overflow: hidden; background: #fff; }
+.search { grid-area: search; display: flex; border: 2px solid var(--primary-dark); border-radius: 999px; overflow: hidden; background: #fff; }
 .search input[type=search] { -webkit-appearance: none; appearance: none; flex: 1; min-width: 0; border: 0; border-radius: 0; padding: 10px 14px; font: inherit; font-size: 16px; color: var(--text); outline: none; }
 .search input[type=search]::-webkit-search-decoration, .search input[type=search]::-webkit-search-cancel-button { -webkit-appearance: none; }
-.search button { border: 0; background: var(--primary); color: #fff; padding: 0 16px; cursor: pointer; display: grid; place-items: center; }
-.search button:hover { background: var(--primary-dark); }
+.search button { border: 0; background: var(--primary-dark); color: #fff; padding: 0 16px; cursor: pointer; display: grid; place-items: center; }
+.search button:hover { background: #9e2f0b; }
 
 /* Department bar */
 .dept { background: var(--text); }
@@ -67,12 +67,12 @@ p { margin: 0; }
 /* Buttons */
 .btn { display: inline-block; text-align: center; text-decoration: none; font-weight: 800; font-size: 16px;
   padding: 12px 22px; border-radius: 999px; border: 2px solid transparent; }
-.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary { background: var(--primary-dark); color: #fff; }
 .btn-light { background: #fff; color: var(--text); }
 .btn-light:hover { background: var(--light); }
 .btn-outline { border-color: #fff; color: #fff; }
 .btn-outline:hover { background: rgba(255,255,255,.1); }
-.link { font-weight: 700; color: var(--primary); text-decoration: none; }
+.link { font-weight: 700; color: var(--primary-dark); text-decoration: none; }
 
 .banner-copy h2 { font-size: 23px; }
 h2 { font-size: 21px; font-weight: 800; }
@@ -84,14 +84,14 @@ section { padding: 20px 0 4px; }
 .banner-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; mix-blend-mode: multiply; }
 .eyebrow { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--primary-dark); margin-bottom: 6px; }
 .banner-copy .btn { margin-top: 14px; padding: 10px 18px; font-size: 15px; }
-.banner-card:hover .btn-primary { background: var(--primary-dark); }
+.banner-card:hover .btn-primary { background: #9e2f0b; }
 
 /* 2. Tiles */
 .tile-grid { list-style: none; padding: 0; margin: 12px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .tile-grid a { display: block; text-decoration: none; color: var(--text); background: var(--warm); border-radius: 12px; overflow: hidden; }
 .tile-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; }
 .tile-grid span { display: block; padding: 10px 12px; font-weight: 800; font-size: 15px; }
-.tile-grid a:hover span { color: var(--primary); }
+.tile-grid a:hover span { color: var(--primary-dark); }
 
 /* 3. Best sellers carousel */
 .car-wrap { position: relative; }
@@ -105,7 +105,7 @@ section { padding: 20px 0 4px; }
 .card .name { font-size: 14px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .card .price { font-weight: 800; font-size: 16px; }
 .card .cause { font-size: 12px; color: var(--muted); }
-.card a:hover .name { color: var(--primary); }
+.card a:hover .name { color: var(--primary-dark); }
 
 /* Sideways rows: fade the right edge while there is more to see */
 .dept-row.more, .chip-row.more { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); }
@@ -116,7 +116,7 @@ section { padding: 20px 0 4px; }
 .chip-row::-webkit-scrollbar { display: none; }
 .chip { flex: 0 0 auto; white-space: nowrap; text-decoration: none; font-size: 14px; font-weight: 700; color: var(--text);
   border: 1.5px solid var(--peach); background: #fff; padding: 8px 14px; border-radius: 999px; }
-.chip:hover { border-color: var(--primary); color: var(--primary); }
+.chip:hover { border-color: var(--primary-dark); color: var(--primary-dark); }
 .chip-all { background: var(--light); }
 
 /* 5. Nonprofits band */
@@ -166,7 +166,7 @@ section { padding: 20px 0 4px; }
   .car-btn { display: grid; place-items: center; position: absolute; top: 28%; z-index: 2; width: 42px; height: 42px; border-radius: 50%;
     border: 1px solid var(--line); background: #fff; color: var(--text); font-size: 26px; line-height: 1; cursor: pointer;
     box-shadow: 0 2px 10px rgba(26,26,46,.15); }
-  .car-btn:hover { color: var(--primary); }
+  .car-btn:hover { color: var(--primary-dark); }
   .car-btn.prev { left: -14px; }
   .car-btn.next { right: -14px; }
   .car-btn:disabled { opacity: 0; pointer-events: none; }
