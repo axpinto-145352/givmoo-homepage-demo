@@ -93,7 +93,7 @@ Second H1 ("GivMoo" and "Every Small Purchase Has BIG Impact." are both H1s on t
 
 All copy is in the static HTML body (no JavaScript rendering), one H1, a heading per section, a meta description, and JSON-LD for `Organization` plus a `WebSite` `SearchAction` pointing at GivMoo's real product search.
 
-**This preview is set to noindex** (`<meta name="robots" content="noindex,nofollow">` plus a `robots.txt` that disallows everything) so it never competes with givmoo.com in search. Remove both in production.
+**This preview is set to noindex** (`<meta name="robots" content="noindex,nofollow">`) so search engines that honor it never list it against givmoo.com. The `robots.txt` in this folder has no effect: crawlers only read robots.txt at the root of a host (`axpinto-145352.github.io/robots.txt`), not in a project subfolder. Remove the noindex tag in production.
 
 ## Hosting it on GitHub Pages
 
