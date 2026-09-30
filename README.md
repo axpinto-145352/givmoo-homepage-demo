@@ -17,6 +17,11 @@ v1 had 5 sections and read as a lot. v2 cut to 3 but read like a landing page, n
 
 One line under the department bar says what GivMoo is: "Every purchase supports a cause. Free shipping on orders over $50."
 
+## Tested on (2026-09-30, live URL)
+WebKit (Safari and every iPhone/iPad browser) and Chrome 152 (Android Chrome, desktop Chrome and Edge) at 16 sizes: phones 320 to 430 wide, two phones on their side, three tablets, desktops 1280 to 2560. Firefox 154 at 1280, 1366, 1920 and a 400px window. Each run checks: no sideways page scroll, fonts and images load, no clipped labels, tap targets at least 24px (nav targets 44px), one H1, search submits to `givmoo.com/?post_type=product&s=...`, and the last best seller can be reached (arrows at 720px and up, swipe below).
+
+Only the search bar stays pinned when you scroll (like Amazon's mobile site). The department bar scrolls away. On phones, "For nonprofits" moves into the department bar.
+
 ## The right-time banner: suggested rotation (from GivMoo's own categories)
 
 | When | Banner | Category size today |

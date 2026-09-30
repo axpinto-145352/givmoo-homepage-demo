@@ -67,7 +67,7 @@
       <form class="search" action="https://givmoo.com/" method="get" role="search">
         <input type="hidden" name="post_type" value="product">
         <label class="sr-only" for="q">Search GivMoo</label>
-        <input id="q" type="search" name="s" placeholder="Search tees, mugs, gifts" autocomplete="off">
+        <input id="q" type="search" name="s" placeholder="Search GivMoo" autocomplete="off">
         <button type="submit" aria-label="Search">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         </button>
@@ -77,8 +77,10 @@
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
       </a>
     </div>
-    <!-- Department bar: the browse path. Scrolls sideways on a phone. -->
-    <nav class="dept" aria-label="Departments">
+  </header>
+
+  <!-- Department bar: the browse path. Scrolls sideways on a phone and scrolls away with the page; only the search bar stays pinned. -->
+  <nav class="dept" aria-label="Departments">
       <div class="wrap dept-row">
         <a href="https://givmoo.com/shop/?orderby=popularity">Best sellers</a>
         <a href="https://givmoo.com/product-category/seasons/fall/">Fall</a>
@@ -89,12 +91,12 @@
         <a href="https://givmoo.com/product-category/bath-body/">Bath &amp; body</a>
         <a href="https://givmoo.com/product-category/home-decor/">Home décor</a>
         <a href="https://givmoo.com/product-category/shop-by-cause/">Shop by cause</a>
+        <a class="dept-np" href="#nonprofits">For nonprofits</a>
       </div>
-    </nav>
-  </header>
+  </nav>
 
-  <!-- One line that says what GivMoo is, where Amazon puts "Deliver to" -->
-  <p class="promise"><span class="wrap"><strong>Every purchase supports a cause.</strong> Free shipping on orders over $50.</span></p>
+  <!-- One line that says what GivMoo is, where Amazon puts "Deliver to". It is the page H1 so AI tools and search read what the site is. -->
+  <div class="promise"><div class="wrap"><h1>Every purchase supports a cause.</h1> <span>Free shipping on orders over $50.</span></div></div>
 
   <main>
 
@@ -104,7 +106,7 @@
         <a class="banner-card" href="https://givmoo.com/product-category/seasons/fall/">
           <div class="banner-copy">
             <p class="eyebrow">Fall favorites</p>
-            <h1 id="banner-title">Cozy picks for cooler days. Every one supports a cause.</h1>
+            <h2 id="banner-title">Cozy picks for cooler days.</h2>
             <span class="btn btn-primary">Shop Fall</span>
           </div>
           <img src="assets/products/womens-fleece-vest.jpg" alt="Black Columbia fleece vest with a veteran flag patch" width="600" height="600">
@@ -140,6 +142,8 @@
           <h2 id="best-title">Best sellers</h2>
           <a class="link" href="https://givmoo.com/shop/?orderby=popularity">See all</a>
         </div>
+        <div class="car-wrap">
+        <button class="car-btn prev" type="button" aria-label="Previous best sellers" disabled>&#8249;</button>
         <ul class="carousel" role="list">
           <li class="card"><a href="https://givmoo.com/product/mootilda-socks-custom-designed-womens-funny-cow-print-knee-high-socks-soft-over-the-calf-novelty-socks-for-costumes-gifts-everyday-wear/">
             <img src="assets/products/socks.jpg" alt="Cow print knee-high socks" width="600" height="600" loading="lazy">
@@ -182,6 +186,8 @@
             <span class="price">$19.99 to $24.99</span>
             <span class="cause">Supports GivMoo GiveBack Fund</span></a></li>
         </ul>
+        <button class="car-btn next" type="button" aria-label="More best sellers">&#8250;</button>
+        </div>
       </div>
     </section>
 
@@ -231,6 +237,32 @@
       <p class="legal">© 2026 GivMoo LLC · <a href="https://givmoo.com/privacy-policy/">Privacy</a> · <a href="https://givmoo.com/terms-of-service/">Terms</a> · Concept mockup by Veteran Vectors. Every link goes to the live givmoo.com.</p>
     </div>
   </footer>
+
+  <script>
+    // Arrows for the best-sellers row, and a fade on any sideways row that has more to see.
+    (function () {
+      var rows = document.querySelectorAll('.carousel, .dept-row, .chip-row');
+      function mark(el) {
+        var more = el.scrollLeft + el.clientWidth < el.scrollWidth - 4;
+        el.classList.toggle('more', more);
+        var wrap = el.closest('.car-wrap');
+        if (wrap) {
+          wrap.querySelector('.prev').disabled = el.scrollLeft <= 4;
+          wrap.querySelector('.next').disabled = !more;
+        }
+      }
+      rows.forEach(function (el) {
+        mark(el);
+        el.addEventListener('scroll', function () { mark(el); }, { passive: true });
+      });
+      window.addEventListener('resize', function () { rows.forEach(mark); });
+      document.querySelectorAll('.car-wrap').forEach(function (wrap) {
+        var list = wrap.querySelector('.carousel');
+        wrap.querySelector('.prev').addEventListener('click', function () { list.scrollBy({ left: -list.clientWidth * 0.9, behavior: 'smooth' }); });
+        wrap.querySelector('.next').addEventListener('click', function () { list.scrollBy({ left: list.clientWidth * 0.9, behavior: 'smooth' }); });
+      });
+    })();
+  </script>
 
 </body>
 </html>
