@@ -175,7 +175,7 @@ section { padding: 20px 0 4px; }
   .car-btn:hover { color: var(--primary-dark); }
   .car-btn.prev { left: -14px; }
   .car-btn.next { right: -14px; }
-  .car-btn:disabled { opacity: 0; pointer-events: none; }
+  .car-btn:disabled { opacity: 0; cursor: default; }
 }
 /* Phones on their side: short screens get a compact banner */
 @media (max-height: 500px) and (min-width: 720px) {
