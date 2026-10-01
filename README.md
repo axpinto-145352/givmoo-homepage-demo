@@ -45,7 +45,7 @@ Prices, names, images, categories and the best-seller order come from GivMoo's W
 - **The delivery promise contradicts itself.** Every product card on the live homepage says "Get it in 2-4 days". The FAQ says "it takes 2-5 days to produce and standard shipping takes 3-5 business days." The mockup uses the FAQ numbers. Pick the true one and use it everywhere.
 - **"®-Inspired" product titles are a pattern, not a one-off.** The Fall category alone has "Adidas® Inspired" (6 shoes), "Converse® Inspired", "REI® Inspired" (2 tees) and "Mead® Inspired", plus "LoveShackFancy® Inspired" in best sellers. Worth a lawyer's look.
 - The #1 best seller's main photo (Mootilda socks) still carries a "FREE Pair, July 20 to Aug 31" ribbon. That offer is over. The mockup uses the product's second photo.
-- The IISE mug and tumbler titles say "Professional Engineering Society." IISE Global is the International Institute for Sexual Empowerment (iiseglobal.org). The titles describe the wrong organization.
+- The IISE mug's web address reads `iise-logo-ceramic-mug-professional-engineering-society-coffee-cup...`. IISE Global is the International Institute for Sexual Empowerment (iiseglobal.org), not the engineering society. The product titles and descriptions are fine; only that URL slug is wrong. (Corrected 2026-09-30: an earlier version of this note said the titles were wrong.)
 - Only 2 of the 30 best sellers have a review (1 each). Amazon-style star ratings aren't possible yet, so the cards don't show them.
 - The #3 best seller is titled "LoveShackFancy® Inspired." A brand name in a product title is worth a second look.
 
